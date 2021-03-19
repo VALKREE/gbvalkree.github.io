@@ -1,0 +1,138 @@
+.main__cart
+	&-order
+		margin: 96px 0 128px 0
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		&_items
+			max-width: 650px 
+			display: flex
+			flex-direction: column
+			&-items
+				&_card
+					box-shadow: 15px 10px 20px 0px #000
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					align-items: center
+					&-info img
+						width: 100%
+						max-width: 260px
+						max-height: 300px
+					&-info
+						max-width: 390px
+						width: 100%
+						padding: 22px 30px 62px 30px
+						&_heading
+							margin-bottom: 42px
+							font-size: 26px
+							line-height: 29px
+							color: #222222
+						&_form
+							display: flex
+							flex-direction: column
+							justify-content: left
+							align-items: top
+							&-category
+								font-size: 22px
+								line-height: 26px
+								color: #575757
+							&-category span
+								color: #F16D7F
+							&-property
+								font-size: 22px
+								line-height: 26px
+								color: #575757
+			&-items:not(last-child)
+				margin-bottom: 40px
+			&_buttons
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-top: 72px
+				&_clearCart
+					font-weight: 300
+					font-size: 14px
+					line-height: 17px
+					color: #000000
+					border: 1px solid #A4A4A4
+					width: 240px
+					height: 50px
+					background: #fff					
+				&_continue
+					font-weight: 300
+					font-size: 14px
+					line-height: 17px
+					color: #000000
+					border: 1px solid #A4A4A4
+					width: 240px
+					height: 50px
+					background: #fff
+		&_check
+			margin-top: 16px
+			max-width: 360px
+			&-top
+				display: flex
+				flex-direction: column
+				margin-bottom: 58px
+				&_h2
+					font-weight: 300
+					font-size: 16px
+					line-height: 19px
+					color: #222222
+					margin-bottom: 20px
+				&_input
+					font-weight: 300
+					font-size: 13px
+					line-height: 16px
+					color: #B1B1B1
+					padding: 12px 18px 12px 18px
+					margin: 10px 0
+				&_a
+					font-weight: 300
+					font-size: 11px
+					line-height: 13px
+					color: #4A4A4A
+					background: #FFF 
+					width: 100px
+					height: 35px
+					border: 1px solid #A4A4A4
+					display: flex
+					justify-content: center
+					align-items: center
+			&-bottom
+				background: #F5F3F3
+				padding: 42px
+				&_subtotal
+					text-align: right
+					font-size: 11px
+					line-height: 13px
+					color: #4A4A4A
+				&_subtotal span
+					margin-left: 10px
+				&_grandtotal
+					text-align: right
+					font-weight: 300
+					font-size: 16px
+					line-height: 19px
+					color: #222222
+					margin-top: 12px
+				&_grandtotal span
+					color: #F16D7F
+					margin-left: 10px
+				&_hr
+					background: #E2E2E2
+					height: 1px
+					margin: 21px 0 17px 0
+				&_a
+					font-weight: 300
+					font-size: 16px
+					line-height: 19px
+					color: #FFFFFF
+					width: 280px
+					height: 50px
+					background: #F16D7F
+					display: flex
+					justify-content: center
+					align-items: center

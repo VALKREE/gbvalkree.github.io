@@ -1,0 +1,458 @@
+@import vars
+@import catalog
+@import product
+@import cart
+@import animation
+@import registration
+
+*
+    margin: 0
+    padding: 0
+
+a
+    color: $color1_3
+    text-decoration: none
+a:hover
+    color: $color0_1
+    transition: color .45s ease
+ul,ol
+    margin: 0
+    padding: 0
+li
+    list-style: none
+body
+    font-family: 'Lato'
+details, :hover, :active, :focus
+    outline: none
+    outline-offset: 0
+summary
+    cursor: pointer
+    user-select: none
+    &::-webkit-details-marker
+        display: none
+details[open]
+    transition: all .9s ease
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.header
+    height: 75px
+    background-color: $color1_1
+    display: flex
+    justify-content: space-between
+    &__left
+        display: flex
+        align-items: center
+        min-width: 300px
+    &__search
+        width: 100%
+        max-width: 300px
+        min-height: 75px
+        display: flex
+        align-items: center
+        margin-left: 41px
+        cursor: pointer
+        &-input
+            display: none
+    &__search:hover > svg
+        position: absolute
+        transform:  translateX(180px) rotate(360deg)
+        transition: transform .4s ease-in
+    &__search:hover > .header__search-input
+        display: flex
+        
+    &__right
+        display: flex
+        align-items: center
+        &-summary
+            display: flex
+        &-boxForDetails:not(last-child)
+            position: relative
+            display: flex
+            align-items: center
+            margin-right: 25px
+        &-details_menu[open]
+            position: absolute
+            width: 232px
+            background: $color2_1
+            top: 38px
+            right: calc(0% - 516px)
+            padding: 37px 34px 150px 35px
+        &-details_menu[open] > &-summary
+            position: absolute
+            top: calc(0% - 50px)
+            left: calc(0% - 247px)
+        &-summary_menu_exit
+            position: absolute
+            top: 16px
+            right: 16px
+        &-summary_menu_h4
+            font-size: 14px
+            line-height: 17px
+            color: $color1_3
+            margin-top: 37px
+            margin-bottom: 24px
+        &-summary_menu_categoryLink
+            color: $color0_1
+            font-size: 14px
+            line-height: 17px
+        &-summary_menu_ul            
+            &:not(last-child)
+                margin-bottom: 20px
+        &-summary_menu_li
+            font-size: 14px
+            line-height: 17px
+            color: $color1_4
+            list-style: none
+            &:not(last-child)
+                margin: 11px
+
+.promo
+    background: $color2_6
+    display: flex
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+
+.promo__img
+    width: 50%
+
+.promo_photo
+    width: 100%
+
+.promo__h1
+    font-weight: 900
+    font-size: 48px
+    line-height: 58px
+    color: $color1_1
+
+.promo__h2
+    font-weight: 700
+    font-size: 32px
+    line-height: 38px
+
+.promo__h2_select
+    color: $color0_1
+
+.promo__text
+    padding-top: 16%
+
+.promo__content
+    border-left: 12px solid $color0_1
+    padding-left: 16px
+
+.sale
+    padding-top: 64px
+    padding-bottom: 96px
+
+.sale-top_item
+    height: 260px
+    flex-grow: 1
+    background-position: center
+
+.sale_top
+    display: flex
+    gap: 30px
+
+.sale-item-1
+    background-image: url(../img/Group36.jpg)
+
+.sale-item-2
+    background-image: url(../img/Group37.jpg)
+
+.sale-item-3
+    background-image: url(../img/Group38.jpg)
+
+.sale-item-4
+    background-image: url(../img/Group39.jpg)
+    height: 180px
+    background-position: center
+    width: 100%
+    margin-top: 30px
+
+.sale-top_item, .sale-bottom_item
+    text-align: center
+    color: $color2_1
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.sale-top_item, .sale-bottom_item
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+
+.sale-top_item_select, .sale-bottom_item_select
+    color: $color0_1
+    font-size: 24px
+    font-weight: 700
+
+.fetured-items
+    margin-bottom: 96px
+
+.fetured-items__heading
+    font-size: 30px
+    line-height: 36px
+    color: $color1_1
+    margin-bottom: 6px
+    text-align: center
+
+.fetured-items__text
+    font-size: 14px
+    line-height: 17px
+    color: $color1_7
+    margin-bottom: 48px
+    text-align: center
+
+.product-box
+    padding-top: 48px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 30px
+
+.product
+    background: $color2_3
+    width: 360px
+    position: relative
+
+    &:hover
+        .product__addToCart
+            display: flex
+
+        .product__img-link
+            filter: brightness(0.5)
+
+.product__img-link
+    display: flex
+
+.product__img
+    width: 100%
+
+.product__inner
+    padding: 25px 16px 20px 16px
+    text-align: left
+
+.product__name
+    font-size: 13px
+    line-height: 16px
+    color: $color1_3
+
+.product__text
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    padding: 12px 0 18px 0
+
+.product__price
+    font-size: 16px
+    line-height: 19px
+    color: $color0_1
+
+.product__cart
+    margin-right: 11px
+
+.product__addToCart
+    position: absolute
+    top: 188px
+    left: 111px
+    display: none
+    justify-content: center
+    align-items: center
+    border: 1px solid $color2_1
+    color: $color2_1
+    font-size: 14px
+    line-height: 17px
+    width: 138px
+    height: 43px
+
+    &:hover
+        background-color: $color2_1
+        color: $color1_3
+
+        .product__cart
+            fill: $color1_3
+
+.product__browseAll
+    width: 211px
+    height: 47px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 16px
+    line-height: 19px
+    color: $color0_2
+    border: 1px solid $color0_3
+    margin-top: 24px
+
+    &:hover
+        background: $color0_1
+        color: $color2_1
+
+.badge
+    margin: 0 auto
+    background: $color1_1
+    max-height: 341px
+    text-align: center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.badge_card
+    margin-top: 30%
+    margin-bottom: 30%
+
+.badge_h4
+    font-size: 19.96px
+    line-height: 24px
+    color: $color2_2
+    margin-bottom: 16px
+    margin-top: 24px
+
+.badge_p
+    font-weight: 300
+    font-size: 13.972px
+    line-height: 17px
+    color: $color2_2
+
+.rewiews
+    height: 100%
+    max-height: 448px
+    background-image: url('../img/reviews_bg.png')
+    background-size: cover
+    background-position: bottom
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-content: center
+
+.rewiews__left
+    margin: 150px 0 150px 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.rewiews__left-p
+    margin-top: 30px
+    max-width: 360px
+    text-align: center
+    line-height: 24px
+    text-align: center
+    color: $color1_1
+
+.rewiews__right
+    display: flex
+    flex-direction: column
+    text-align: center
+    justify-content: center
+    color: $color1_1
+
+.rewiews__right-sub_h2
+    font-size: 24px
+    line-height: 40px
+
+.rewiews__right-sub_p
+    font-size: 18px
+    line-height: 30px
+
+.rewiews__right-subscribe
+    display: flex
+    flex-direction: row
+    margin-top: 32px
+    max-width: 570px
+
+.rewiews__right-subscribe__left
+    border: none
+    outline: none
+    background: $color2_5
+    font-size: 14px
+    line-height: 17px
+    display: flex
+    align-items: center
+    color: rgba(34, 34, 36, 0.67)
+    height: 49px
+    width: 320px
+    align-items: center
+    padding-left: 22px
+    border-radius: 50px 0 0 50px
+    font-size: 20px
+
+.rewiews__right-subscribe__right
+    border: none
+    outline: none
+    cursor: pointer
+    font-size: 14px
+    line-height: 17px
+    display: flex
+    align-items: center
+    text-align: center
+    color: $color2_1
+    height: 49px
+    width: 100px
+    background: $color0_5
+    align-items: center
+    justify-content: center
+    border-radius: 0 50px 50px 0
+
+.footer
+    background: $color1_12
+    height: 80px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.footer__left
+    font-size: 16px
+    line-height: 19px
+    color: $color2_2
+
+.footer__right
+    display: flex
+    justify-content: center
+    align-items: center
+    &-social
+        width: 32px
+        height: 32px
+        background: $color2_1 
+        display: flex
+        justify-content: center
+        align-items: center
+    &-social:not(last-child)
+        margin-right: 6px
+    &-social:hover
+        background: $color0_1
+    &-social:hover svg > path
+        fill: $color2_1
+
+
+.nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: $color2_4
+    height: 148px
+    &_heading
+        font-size: 24px
+        line-height: 29px
+        color: $color0_1
+    &__right
+        &-menu
+            display: flex
+            list-style: none
+            &_link
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+                color: $color1_8
+            &_link:not(:last-child):after 
+                content: '/'
+                padding-left: 8px
+                padding-right: 8px
+
+.active
+    font-weight: 700
+    color: $color0_1
+    
+

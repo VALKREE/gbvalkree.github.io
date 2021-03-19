@@ -1,0 +1,124 @@
+@import vars
+@keyframes slider-right
+	0%
+		left: 0px
+	100%
+		left: 200px
+
+.header
+	&__right
+		&-details_menu[open] > &-summary
+			left: calc(0% - 360px)
+
+.collection
+	&__slider
+		background-color: $color2_7
+		width: 100%
+		max-width: 1600px
+		height: 100vh
+		max-height: 780px
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		z-index: -1
+	&__left-arrow
+		position: absolute
+		z-index: 1
+		left: 0
+		border: none
+	&__carousel
+		width: 100%
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		&-item
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			& img
+				max-width: 100%
+		&-silde1
+			animation: slider-right1 2s linear 0s 1 normal
+		&-silde2
+			animation: slider-right1 2s linear 0s 1 normal
+		&-silde3
+			animation: slider-right1 2s linear 0s 1 normal
+	&__right-arrow
+		position: absolute
+		z-index: 1
+		right: 0
+		border: none
+	&__left-arrow:hover > svg .pathColor, &__right-arrow:hover > svg .pathColor
+		fill: $color0_1
+
+	&__content
+		margin-top: -68px
+		border: 1px solid $color1_15
+		background-color: $color2_1
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		margin-bottom: 80px
+		z-index: 1
+	&__miniHeading
+		color: $color0_1
+		margin: 65px 0 28px 0
+		font-weight: 300
+		font-size: 14px
+		line-height: 17px
+	&__short-line
+		border: 3px solid $color0_4
+		width: 63px
+	&__heading
+		margin-top: 12px
+		font-weight: 300
+		font-size: 18px
+		line-height: 22px
+		color: $color1_14
+	&__text
+		font-weight: 300
+		font-size: 14px
+		line-height: 17px
+		color: $color1_5
+		text-align: center
+		margin: 48px 0 32px 0
+		max-width: 555px
+	&__price
+		font-weight: 300
+		font-size: 24px
+		line-height: 29px
+		color: $color0_4
+	&__hr
+		width: 650px
+		border: 1px solid $color1_15
+		margin: 65px 0 65px 0
+	&__list
+		display: flex
+		flex-direction: row
+	&__list-li
+		font-size: 14px
+		line-height: 17px
+		color: $color1_4
+	&__list-li:not(last-child)
+		margin-right: 22px
+	&__list-li svg
+		margin-left: 8px
+	&__details
+		display: flex
+	&__summary
+		display: flex
+	&__button
+		font-size: 16px
+		line-height: 19px
+		color: $color0_2
+		border: 1px solid $color0_3
+		width: 210px
+		height: 48px
+		background-color: $color2_1
+		margin: 48px 0 65px 0  
+		
+

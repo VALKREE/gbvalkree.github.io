@@ -1,0 +1,110 @@
+.product__filters
+    display: flex
+    margin-top: 50px
+    justify-content: space-between
+    position: relative
+
+.product__filters-left
+    display: flex
+    flex-direction: row
+    align-items: center
+    position: relative
+
+.product__filters-left_filter
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    svg
+        margin-left: 11px
+
+    &::-webkit-details-marker
+        display: none
+
+.product__filters-left_filter_details
+    position: absolute
+    display: flex
+    flex-direction: row
+    cursor: pointer
+
+    &::after
+        content: ''
+
+.product__filters-left_filter_details[open]
+    top: 0
+    width: 360px
+    z-index: 1
+    background-color: #fff
+    color: #EF5B70
+    fill: #EF5B70
+    content: ''
+
+.product__filter-filter_container
+    margin: 24px 0 24px 0
+    display: flex
+    flex-direction: column
+
+.pf-fh_item
+    &:not(last-child)
+        margin-bottom: 11px
+
+.product__filters-right
+    display: flex
+    flex-direction: row
+    padding-right: 33%
+
+.product__filters-right_container
+    position: relative
+    min-width: 80px
+
+    &:not(last-child)
+        margin-right: 28px
+
+.product__filters-right-summary
+    display: block
+
+    &::-webkit-details-marker
+        display: none
+
+.product__filters-right-details_size[open]
+    z-index: 1
+    position: absolute
+    background: #FFFFFF
+    min-width: 80px
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+.product___sizeBox
+    padding: 9.5px
+
+.catalog_pages
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    border: 1px solid #EBEBEB
+    padding: 10px
+    border-radius: 5px
+
+.catalog_toLeft
+    margin-right: 18px
+    margin-left: 16px
+
+.catalog_toRight
+    margin-left: 18px
+    margin-right: 16px
+
+.catalog_pagesTo
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 15px
+
+.pagenumber
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    opacity: 0.17
+
+.pagenumActive
+    color: #EF5B70
+    opacity: 1
