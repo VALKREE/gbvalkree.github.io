@@ -1,0 +1,107 @@
+
+@media (max-width: 576px)
+    .center
+        padding-left: calc(50% - 150px)
+        padding-right: calc(50% - 150px)
+    .header
+        &__mobile
+            margin: 10px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__mobile svg > path
+            fill: #000
+        &__right
+            width: 35px
+        &__cart
+            display: none
+        &__registration
+            display: none
+    .nav
+        top: 85px
+        right: 8px
+        width: 305px
+    .promo
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 364px
+        &__img
+            display: none
+        &__text
+            padding: 0
+        &__h1
+            font-size: 38px
+            line-height: 44px
+        &__h2
+            font-size: 20px
+            line-height: 24px
+    .sale
+        padding-top: 64px
+        padding-bottom: 64px
+        &__top
+            flex-direction: column
+            justify-content: center
+            align-items: center
+    .sale__topItem
+        width: 300px
+        height: 250px
+    .sale__bottomItem
+        height: 120px
+    .product-box
+        gap: 16px
+    .badge
+        flex-direction: column
+        padding-top: 48px 
+        padding-bottom: 81px
+    .badge_card:not(last-child)
+        margin-bottom: 48px
+    .rewiews
+        flex-direction: column
+        padding-top: 52px
+        padding-bottom: 100px
+        background-position: 25% 
+        &__left
+            margin-bottom: 48px
+        &__right
+            .rewiews__right-sub_h2
+                font-size: 18px
+                line-height: 30px
+
+            .rewiews__right-sub_p
+                font-size: 18px
+                line-height: 30px
+    .footer
+        height: 150px
+        flex-direction: column
+        justify-content: center
+        padding-top: 50px
+        padding-bottom: 10px
+        &__left
+            margin-bottom: 48px
+            
+    .breadcrumbs
+        flex-direction: column
+        &__left
+            margin-bottom: 32px
+    .products
+        &__filters
+            padding-top: 24px
+            padding-bottom: 0
+        &__left
+            margin-right: 30px
+            width: 34px
+        &__left p
+            display: none
+        &__item
+            min-width: 34px
+            font-size: 12px
+            line-height: 14px
+            &:not(last-child)
+                margin-right: 24px
+                font-size: 12px
+                line-height: 14px
+        &__mobile
+            display: flex
+    .product-box
+        padding-top: 32px

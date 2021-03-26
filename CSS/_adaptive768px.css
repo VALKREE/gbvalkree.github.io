@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+  .center {
+    padding-left: calc(50% - 275px);
+    padding-right: calc(50% - 275px); }
+
+  .promo__h1 {
+    font-size: 37px;
+    line-height: 44px; }
+  .promo__h2 {
+    font-size: 24px;
+    line-height: 28px; }
+
+  .sale {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  .sale__topItem {
+    height: 160px; }
+
+  .sale__bottomItem {
+    height: 120px; }
+
+  .product-box {
+    gap: 16px; }
+
+  .badge {
+    flex-direction: column; }
+
+  .badge_card:not(last-child) {
+    margin-bottom: 48px; }
+
+  .rewiews {
+    flex-direction: column;
+    padding-top: 52px;
+    padding-bottom: 140px;
+    background-position: 25%; }
+    .rewiews__left {
+      margin-bottom: 48px; }
+    .rewiews__right .rewiews__right-sub_h2 {
+      font-size: 18px;
+      line-height: 30px; }
+    .rewiews__right .rewiews__right-sub_p {
+      font-size: 18px;
+      line-height: 30px; } }
+
+/*# sourceMappingURL=_adaptive768px.css.map */

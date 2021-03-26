@@ -1,9 +1,4 @@
 @import vars
-@import catalog
-@import product
-@import cart
-@import animation
-@import registration
 
 *
     margin: 0
@@ -20,6 +15,8 @@ ul,ol
     padding: 0
 li
     list-style: none
+label
+    cursor: pointer
 body
     font-family: 'Lato'
 details, :hover, :active, :focus
@@ -44,69 +41,88 @@ details[open]
     &__left
         display: flex
         align-items: center
-        min-width: 300px
     &__search
         width: 100%
-        max-width: 300px
         min-height: 75px
         display: flex
         align-items: center
         margin-left: 41px
         cursor: pointer
-        &-input
-            display: none
-    &__search:hover > svg
-        position: absolute
-        transform:  translateX(180px) rotate(360deg)
-        transition: transform .4s ease-in
-    &__search:hover > .header__search-input
-        display: flex
         
     &__right
         display: flex
         align-items: center
-        &-summary
-            display: flex
-        &-boxForDetails:not(last-child)
-            position: relative
-            display: flex
-            align-items: center
-            margin-right: 25px
-        &-details_menu[open]
-            position: absolute
-            width: 232px
-            background: $color2_1
-            top: 38px
-            right: calc(0% - 516px)
-            padding: 37px 34px 150px 35px
-        &-details_menu[open] > &-summary
-            position: absolute
-            top: calc(0% - 50px)
-            left: calc(0% - 247px)
-        &-summary_menu_exit
-            position: absolute
-            top: 16px
-            right: 16px
-        &-summary_menu_h4
-            font-size: 14px
-            line-height: 17px
-            color: $color1_3
-            margin-top: 37px
-            margin-bottom: 24px
-        &-summary_menu_categoryLink
-            color: $color0_1
-            font-size: 14px
-            line-height: 17px
-        &-summary_menu_ul            
-            &:not(last-child)
-                margin-bottom: 20px
-        &-summary_menu_li
-            font-size: 14px
-            line-height: 17px
-            color: $color1_4
-            list-style: none
-            &:not(last-child)
-                margin: 11px
+        justify-content: space-between
+        width: 168px
+    &__checkbox
+
+    &__icon
+    &__mobile
+        display: none
+.nav
+    z-index: 1
+    background: $color2_1
+    padding: 16px 16px 32px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    width: $navWidth
+    box-sizing: border-box
+    outline: none
+    outline-offset: 0
+    user-select: none 
+    display: flex
+    flex-direction: column
+    &__exit
+        text-align: right
+    &__heading
+        font-size: 14px
+        line-height: 17px
+        color: $color1_3
+        margin-bottom: 24px
+    &__catalog:not(last-child)
+        margin-bottom: 20px
+    &__category
+        font-size: 14px
+        line-height: 17px
+        color: $color0_1
+        margin-bottom: 12px
+    &__items   
+        padding-left: 22px
+    &__items li:not(last-child)
+        margin-bottom: 11px
+#switcher
+    display: none
+    &:checked ~ .nav
+        display: none
+        
+/* breadcrumbs begin */
+.breadcrumbs
+    background: $color2_4
+    padding-top: 60px
+    padding-bottom: 60px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__left
+    &__heading
+        font-size: 24px
+        line-height: 29px
+        color: $color0_1
+    &__right
+    &__menu
+        display: flex
+    &__link
+        font-size: 14px
+        line-height: 17px
+        color: $color1_8
+        &:not(:last-child):after
+            content: '/'
+            padding: 0 5px
+    &__link > .active
+        color: $color0_1
+        font-weight: bold 
+/* breadcrumbs end */
 
 .promo
     background: $color2_6
@@ -119,6 +135,7 @@ details[open]
 
 .promo_photo
     width: 100%
+    user-select: none 
 
 .promo__h1
     font-weight: 900
@@ -144,60 +161,128 @@ details[open]
 .sale
     padding-top: 64px
     padding-bottom: 96px
+    &__top
+        display: flex
+        flex-direction: row
+        gap: 30px
+        margin-bottom: 30px
+    &__topItem
+        overflow: hidden
+        width: 360px
+        height: 260px
+        font-size: 16px
+        line-height: 19px
+        color: $color2_1
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        -webkit-background-size: cover 
+        -o-background-size: cover 
+        background-size: cover 
+        &-1
+            background-image: url(../img/Group36.jpg)
+        &-2
+            background-image: url(../img/Group37.jpg)
+        &-3
+            background-image: url(../img/Group38.jpg)
+    &__span
+        color: $color0_1
+        font-size: 24px
+        line-height: 28px
+    &__bottom
+        max-width: 1140px
+        max-height: 180px 
+    &__bottomItem
+        overflow: hidden
+        font-size: 16px
+        line-height: 19px
+        color: $color2_1
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        -webkit-background-size: cover 
+        -o-background-size: cover 
+        background-size: cover 
+        &-4
+            background-image: url(../img/Group39.jpg)
+            height: 180px
+            width: 100%
 
-.sale-top_item
-    height: 260px
-    flex-grow: 1
-    background-position: center
-
-.sale_top
-    display: flex
-    gap: 30px
-
-.sale-item-1
-    background-image: url(../img/Group36.jpg)
-
-.sale-item-2
-    background-image: url(../img/Group37.jpg)
-
-.sale-item-3
-    background-image: url(../img/Group38.jpg)
-
-.sale-item-4
-    background-image: url(../img/Group39.jpg)
-    height: 180px
-    background-position: center
-    width: 100%
-    margin-top: 30px
-
-.sale-top_item, .sale-bottom_item
-    text-align: center
-    color: $color2_1
-    display: flex
-    flex-direction: column
-    justify-content: center
-
-.sale-top_item, .sale-bottom_item
-    font-weight: 400
-    font-size: 16px
-    line-height: 28px
-
-.sale-top_item_select, .sale-bottom_item_select
-    color: $color0_1
-    font-size: 24px
-    font-weight: 700
-
-.fetured-items
+.products
     margin-bottom: 96px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    &__filters
+        padding: 50px 0 0 0
+        display: flex
+        align-items: center
+        width: 100%
+    &__left
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: $color1_3
+        margin-right: 300px 
+    &__right
+        display: flex
+        font-size: 14px
+        line-height: 17px
+        color: $color1_4
+    &__item
+        position: relative
+        word-wrap: nowrap
+    &__mobile
+        display: none
+    &__item:not(last-child)
+        margin-right: 28px
+        font-size: 14px
+        line-height: 17px
+        color: $color1_4
+    &__checkbox
+        display: none
+    &__trends,&__size,&__price
+        width: 100%
+        z-index: 1
+        position: absolute
+        padding: 7px 9px 12px 9px
+        background: $color2_1
+        box-shadow: 0 0 10px -5px $color1_3 
+        top: 20px
+    &__ul
+        display: flex
+        flex-direction: column
+    &_li
+        display: flex
+        align-items: center
+        &:not(last-child)
+            margin-bottom: 10px
+    &__li label
+        padding-left: 10px
+#trend
+    display: none
+    &:checked ~ .products__trends
+        display: none
+#size
+    display: none
+    &:checked ~ .products__size
+        display: none
+#price
+    display: none
+    &:checked ~ .products__price
+        display: none
 
-.fetured-items__heading
+.products__heading
     font-size: 30px
     line-height: 36px
     color: $color1_1
     margin-bottom: 6px
     text-align: center
 
-.fetured-items__text
+.products__text
     font-size: 14px
     line-height: 17px
     color: $color1_7
@@ -207,9 +292,11 @@ details[open]
 .product-box
     padding-top: 48px
     display: flex
+    flex-direction: row
     flex-wrap: wrap
     justify-content: center
     gap: 30px
+    width: 100%
 
 .product
     background: $color2_3
@@ -292,15 +379,15 @@ details[open]
 .badge
     margin: 0 auto
     background: $color1_1
-    max-height: 341px
     text-align: center
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
+    padding: 104px 0 104px 0
 
 .badge_card
-    margin-top: 30%
-    margin-bottom: 30%
+    width: 100%
+    max-width: 360px
 
 .badge_h4
     font-size: 19.96px
@@ -317,7 +404,6 @@ details[open]
 
 .rewiews
     height: 100%
-    max-height: 448px
     background-image: url('../img/reviews_bg.png')
     background-size: cover
     background-position: bottom
@@ -326,9 +412,10 @@ details[open]
     flex-wrap: wrap
     justify-content: space-between
     align-content: center
+    padding-top: 150px
+    padding-bottom: 150px
 
 .rewiews__left
-    margin: 150px 0 150px 0
     display: flex
     flex-direction: column
     justify-content: center
@@ -373,7 +460,8 @@ details[open]
     align-items: center
     color: rgba(34, 34, 36, 0.67)
     height: 49px
-    width: 320px
+    width: 100%
+    max-width: 320px
     align-items: center
     padding-left: 22px
     border-radius: 50px 0 0 50px
@@ -397,7 +485,7 @@ details[open]
     border-radius: 0 50px 50px 0
 
 .footer
-    background: $color1_12
+    background: $color1_2
     height: 80px
     display: flex
     align-items: center
@@ -426,33 +514,12 @@ details[open]
     &-social:hover svg > path
         fill: $color2_1
 
+@import catalog
+@import product
+@import cart
+@import animation
+@import registration
 
-.nav
-    display: flex
-    align-items: center
-    justify-content: space-between
-    background: $color2_4
-    height: 148px
-    &_heading
-        font-size: 24px
-        line-height: 29px
-        color: $color0_1
-    &__right
-        &-menu
-            display: flex
-            list-style: none
-            &_link
-                font-weight: 400
-                font-size: 14px
-                line-height: 17px
-                color: $color1_8
-            &_link:not(:last-child):after 
-                content: '/'
-                padding-left: 8px
-                padding-right: 8px
-
-.active
-    font-weight: 700
-    color: $color0_1
-    
-
+@import adaptive1024px            
+@import adaptive768px
+@import adaptive320px
