@@ -23,6 +23,9 @@ label {
 body {
   font-family: "Lato"; }
 
+html, body {
+  height: 100%; }
+
 details, :hover, :active, :focus {
   outline: none;
   outline-offset: 0; }
@@ -35,6 +38,15 @@ summary {
 
 details[open] {
   transition: all 0.9s ease; }
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.main, .main-cart {
+  flex-grow: 1;
+  min-height: 100%; }
 
 .center {
   padding-left: calc(50% - 570px);
@@ -236,8 +248,7 @@ details[open] {
     line-height: 17px;
     color: #6F6E6E; }
   .products__item {
-    position: relative;
-    word-wrap: nowrap; }
+    position: relative; }
   .products__mobile {
     display: none; }
   .products__item:not(last-child) {
@@ -737,7 +748,8 @@ details[open] {
   margin: 48px 0 65px 0; }
 
 .main-cart {
-  padding: 96px 0 128px 0;
+  padding-top: 96px;
+  padding-bottom: 128px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -978,8 +990,7 @@ details[open] {
 
 .registration__right {
   display: flex;
-  flex-direction: column;
-  align-items: top; }
+  flex-direction: column; }
   .registration__right-heading {
     font-weight: 300;
     font-size: 24px;

@@ -1,0 +1,98 @@
+.main__registration {
+  max-height: 675px;
+  display: flex;
+  justify-content: space-between;
+  margin: 64px 0 96px 0; }
+
+.registration__left-form {
+  display: flex;
+  flex-direction: column; }
+.registration__left-label {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%; }
+.registration__left-inputText {
+  background: #ffffff;
+  width: 360px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  border: 1px solid #a4a4a4;
+  padding: 12px 16px 16px 16px; }
+  .registration__left-inputText:not(last-child) {
+    margin-bottom: 20px; }
+.registration__left-radio {
+  border: 1px solid #a4a4a4;
+  box-sizing: border-box;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle; }
+.registration__left-sex {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 32px 0 32px 0;
+  width: 100%; }
+.registration__left-checkboxWho {
+  margin-right: 20px;
+  padding-left: 10px; }
+.registration__left-hint {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  max-width: 360px; }
+.registration__left-submit {
+  background: #F16D7F;
+  width: 168px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  border: none;
+  margin: 40px 0 0 0; }
+
+.registration__right {
+  display: flex;
+  flex-direction: column; }
+  .registration__right-heading {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000; }
+  .registration__right-text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 22px 0 22px 0;
+    max-width: 650px; }
+  .registration__right-list {
+    display: flex;
+    flex-direction: column; }
+  .registration__right-checks {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    line-height: 29px;
+    color: #000000; }
+  .registration__right-checks:not(last-child) {
+    margin-bottom: 16px; }
+  .registration__right-checks > svg {
+    padding-right: 20px; }
+
+/*# sourceMappingURL=_registration.css.map */
